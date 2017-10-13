@@ -1,0 +1,19 @@
+# 在application.yml中添加配置服务的基本信息以及Git仓库的相关信息
+# 访问配置信息的URL与配置文件的映射关系如下：
+  #  /{application}/{profile}[/{label}]
+  #  /{application}-{profile}.yml
+  #  /{label}/{application}-{profile}.yml
+  #  /{application}-{profile}.properties
+  #  /{label}/{application}-{profile}.properties
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/huang-up/config-repo-demo.git/
+          username: huang-up
+          password: password
+server:
+  port: 1201
