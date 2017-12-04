@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 public class DcController {
 
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @GetMapping("/consumer")
     public String dc() {
