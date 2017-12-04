@@ -13,8 +13,9 @@
         <module>eureka-consumer</module>
         <module>eureka-consumer-ribbon</module>
         <module>eureka-consumer-feign</module>
-        <module>config-client</module>
-        <module>config-server-git</module>
+        <module>admin-server</module>
+        <module>config-server-local</module>
+        <module>hystrix-server</module>
     </modules>
 
     <build>
