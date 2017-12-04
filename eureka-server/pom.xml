@@ -19,6 +19,7 @@
     <artifactId>eureka-server</artifactId>
 
     <dependencies>
+        <!--eureka-server must-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
