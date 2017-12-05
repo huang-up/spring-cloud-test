@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
  * Created by admin on 2017/11/21.
  */
 @RestController
-@RequestMapping("/hystrix")
 public class HystrixController {
 
     @Value("${service.hotel.url}")
