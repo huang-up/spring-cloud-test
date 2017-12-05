@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ public class DcController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @HystrixCommand(groupKey = "eureka-client", commandKey = "DcController#dc", fallbackMethod = "consumerFallback")
     @GetMapping("/consumer")
     public String dc() {
         // 对于RestTemplate的使用，我们的第一个url参数有一些特别。
@@ -23,6 +25,10 @@ public class DcController {
         // 因为Spring Cloud Ribbon有一个拦截器，它能够在这里进行实际调用的时候，自动的去选取服务实例，
         // 并将实际要请求的IP地址和端口替换这里的服务名，从而完成服务接口的调用。
         return restTemplate.getForObject("http://eureka-client/dc", String.class);
+    }
+
+    public String consumerFallback() {
+        return "consumer fallback";
     }
 
 }
