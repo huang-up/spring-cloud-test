@@ -13,4 +13,9 @@ public class DcClientHystrix implements DcClient {
         System.out.println("hello fallback");
         return "this message send failed";
     }
+
+    @Override
+    public String consumerDc() {
+        return "test hystrix";
+    }
 }

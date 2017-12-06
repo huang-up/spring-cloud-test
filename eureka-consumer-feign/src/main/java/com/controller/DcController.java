@@ -23,4 +23,9 @@ public class DcController {
     public String dc() {
         return dcClient.consumer();
     }
+
+    @GetMapping("/consumerDc")
+    public String consumerDc() {
+        return dcClient.consumerDc();
+    }
 }

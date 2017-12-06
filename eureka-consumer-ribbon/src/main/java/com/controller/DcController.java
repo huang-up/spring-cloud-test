@@ -16,7 +16,7 @@ public class DcController {
     @Autowired
     private RestTemplate restTemplate;
 
-    @HystrixCommand(groupKey = "eureka-client", commandKey = "DcController#dc", fallbackMethod = "consumerFallback")
+    @HystrixCommand(threadPoolKey = "ribbon-eureka-client#dc", groupKey = "eureka-client", commandKey = "ribbon-dc", fallbackMethod = "consumerFallback")
     @GetMapping("/consumer")
     public String dc() {
         // 对于RestTemplate的使用，我们的第一个url参数有一些特别。
