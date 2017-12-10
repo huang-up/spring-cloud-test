@@ -12,10 +12,25 @@ import org.springframework.web.bind.annotation.RestController;
 public class DcController {
     @Autowired
     DiscoveryClient discoveryClient;
+
+    @GetMapping("/")
+    public String index() {
+        return "hello index";
+    }
+
     @GetMapping("/dc")
     public String dc() {
         String services = "Services: " + discoveryClient.getServices();
-        System.out.println(services);
         return services;
+    }
+
+    @GetMapping("/foo")
+    public String foo() {
+        return "eureka-client foo";
+    }
+
+    @GetMapping("/bar")
+    public String bar() {
+        return "eureka-client bar";
     }
 }
