@@ -56,6 +56,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
         </dependency>
+        <!--trace sleuth-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
         <!--monitor & manager-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
