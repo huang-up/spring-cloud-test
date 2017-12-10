@@ -18,6 +18,7 @@
     <groupId>huang-up</groupId>
     <artifactId>admin-server</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <dependencies>
         <!--admin-server must-->
