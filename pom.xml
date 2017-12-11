@@ -23,6 +23,7 @@
         <module>config-server-local</module>
         <module>hystrix-server</module>
         <module>cloud-common</module>
+        <module>zipkin-server</module>
     </modules>
 
     <build>
