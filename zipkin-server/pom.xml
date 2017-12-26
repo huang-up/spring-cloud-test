@@ -27,7 +27,7 @@
             <version>2.4.0</version>
         </dependency>
         <!--保存到数据库需要如下依赖-->
-        <!--<dependency>
+        <dependency>
             <groupId>io.zipkin.java</groupId>
             <artifactId>zipkin-autoconfigure-storage-mysql</artifactId>
         </dependency>
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>-->
+        </dependency>
     </dependencies>
 
     <build>
