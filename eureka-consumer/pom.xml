@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>huang-up</groupId>
-        <artifactId>cloud-common</artifactId>
+        <artifactId>cloud-deps</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../cloud-common/pom.xml</relativePath> <!-- lookup parent from repository -->
+        <relativePath>../cloud-deps/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -15,13 +15,13 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <!--<dependencies>
+    <dependencies>
         <dependency>
             <groupId>huang-up</groupId>
             <artifactId>cloud-common</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-    </dependencies>-->
+    </dependencies>
 
     <build>
         <plugins>
