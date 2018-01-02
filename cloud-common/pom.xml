@@ -16,7 +16,27 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--boot deps-->
+        <!-- The Spring MVC helper of the jsondoc project -->
+        <dependency>
+            <groupId>org.jsondoc</groupId>
+            <artifactId>spring-boot-starter-jsondoc</artifactId>
+            <version>1.2.19</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsondoc</groupId>
+            <artifactId>jsondoc-ui-webjar</artifactId>
+            <version>1.2.19</version>
+        </dependency>
+        
         <!--other-->
+        <!-- logback-elasticsearch-appender -->
+        <dependency>
+            <groupId>com.internetitem</groupId>
+            <artifactId>logback-elasticsearch-appender</artifactId>
+            <version>1.6</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -55,20 +75,6 @@
             <artifactId>okhttp</artifactId>
             <version>3.9.1</version>
         </dependency>
-        <!-- The Spring MVC helper of the jsondoc project -->
-        <dependency>
-            <groupId>org.jsondoc</groupId>
-            <artifactId>jsondoc-springmvc</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-        <!--
-        <dependency>
-            <groupId>org.jsondoc</groupId>
-            <artifactId>jsondoc-ui</artifactId>
-            <version>1.2.17</version>
-            <type>pom</type>
-        </dependency>
-        -->
     </dependencies>
 
     <build>

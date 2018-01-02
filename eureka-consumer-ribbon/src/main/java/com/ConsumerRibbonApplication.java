@@ -1,5 +1,7 @@
 package com;
 
+import org.jsondoc.spring.boot.starter.EnableJSONDoc;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -27,13 +29,20 @@ import org.springframework.web.client.RestTemplate;
 
  * Created by admin on 2017/10/13.
  */
+//@EnableJpaRepositories
+@EnableJSONDoc
 @EnableHystrixDashboard
 @EnableCircuitBreaker
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ConsumerRibbonApplication {
+public class ConsumerRibbonApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         new SpringApplicationBuilder(ConsumerRibbonApplication.class).web(true).run(args);
+    }
+
+    @Override
+    public void run(String... strings) throws Exception {
+        System.out.println("CommandLinerRunnenr");
     }
 }

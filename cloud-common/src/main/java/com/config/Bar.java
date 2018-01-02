@@ -1,25 +1,16 @@
 package com.config;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.jsondoc.core.annotation.ApiObject;
+
 /**
  * Created by h on 2017/12/10.
  */
+@ApiObject
+@Data
+@EqualsAndHashCode
 public class Bar {
     private String name;
     private int age;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
