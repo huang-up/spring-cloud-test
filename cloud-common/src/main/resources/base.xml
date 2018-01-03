@@ -1,10 +1,10 @@
 <included>
     <appender name="ELASTIC" class="com.internetitem.logback.elasticsearch.ElasticsearchAppender">
         <url>http://${log.hostname:-localhost}:${log.port:-8080}/_bulk</url>
-        <index>${spring.application.name}-%date{yyyy-MM-dd}</index>
-        <type>log</type>
-        <loggerName>es-logger</loggerName>  optional
-        <errorLoggerName>es-error-logger</errorLoggerName>  optional
+        <!--<index>${spring.application.name}-%date{yyyy-MM-dd}</index>-->
+        <!--<type>log</type>-->
+        <!--<loggerName>es-logger</loggerName>  optional-->
+        <!--<errorLoggerName>es-error-logger</errorLoggerName>  optional-->
         <connectTimeout>5000</connectTimeout> <!-- optional (in ms, default 30000) -->
         <errorsToStderr>false</errorsToStderr> <!-- optional (default false) -->
         <includeCallerData>false</includeCallerData> <!-- optional (default false) -->
