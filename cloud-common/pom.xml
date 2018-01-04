@@ -31,10 +31,15 @@
         
         <!--other-->
         <!-- logback-elasticsearch-appender -->
-        <dependency>
+        <!--<dependency>
             <groupId>com.internetitem</groupId>
             <artifactId>logback-elasticsearch-appender</artifactId>
             <version>1.6</version>
+        </dependency>-->
+        <dependency>
+            <groupId>huang-up</groupId>
+            <artifactId>logback-es-appender</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+    <property resource="bootstrap.properties"/>
 
-    <property name="log.hostname" value="127.0.0.1" />
-    <property name="log.port" value="8080" />
-    <property name="spring.application.name" value="eureka-consumer-ribbon" />
+    <property name="app.name" value="${spring.application.name}" />
 
-    <!--<include resource="org/springframework/boot/logging/logback/base.xml" />-->
-    <include resource="base.xml"/>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    <include resource="huang-up/logging/logback/base.xml"/>
 
     <jmxConfigurator />
 </configuration>
