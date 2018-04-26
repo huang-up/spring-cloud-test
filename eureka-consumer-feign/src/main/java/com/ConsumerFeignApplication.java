@@ -1,5 +1,9 @@
 package com;
 
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -18,8 +22,15 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ConsumerFeignApplication {
+public class ConsumerFeignApplication implements CommandLineRunner {
+    private static final Logger logger = LoggerFactory.getLogger(ConsumerFeignApplication.class);
     public static void main(String[] args) {
         new SpringApplicationBuilder(ConsumerFeignApplication.class).web(true).run(args);
+    }
+
+    @Override
+    public void run(String... strings) throws Exception {
+        logger.info("test info");
+        logger.debug("test debug");
     }
 }
