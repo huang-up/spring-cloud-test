@@ -8,6 +8,7 @@ import com.mapper.GenericMapper;
 import com.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,6 +37,11 @@ public class AreaController {
         return areaService.findAll();
     }
 
+    @GetMapping(value = "/select")
+    public List<Area> selectAreas() {
+        return areaService.selectAreas();
+    }
+
     @GetMapping(value = "insert")
     public int insert() {
         return areaService.insert();
@@ -47,7 +53,8 @@ public class AreaController {
     }
 
     @GetMapping(value = "delete")
-    public int delete() {
-        return areaService.delete();
+    public int selectAreas(@RequestParam(value = "id", defaultValue = "0", required = false) Integer id) {
+        Assert.notNull(id, "id not null");
+        return areaService.delete(id);
     }
 }

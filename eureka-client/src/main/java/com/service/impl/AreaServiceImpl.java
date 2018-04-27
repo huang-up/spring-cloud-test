@@ -29,6 +29,14 @@ public class AreaServiceImpl implements AreaService {
         return areaMapper.findAll();
     }
 
+    @Override
+    public List<Area> selectAreas() {
+        List<Integer> ids = new ArrayList<Integer>(){{
+            add(1);add(2);add(3);
+        }};
+        return areaMapper.selectAreas(ids);
+    }
+
     @Transactional
     @Rollback
     public int insert() {
@@ -50,7 +58,7 @@ public class AreaServiceImpl implements AreaService {
 
     @Transactional
     @Rollback
-    public int delete() {
-        return areaMapper.deleteByPrimaryKey(100);
+    public int delete(int id) {
+        return areaMapper.deleteByPrimaryKey(id);
     }
 }

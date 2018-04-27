@@ -12,7 +12,8 @@ import java.util.List;
 public interface AreaService {
     Page<Area> findByPage();
     List<Area> findAll();
+    List<Area> selectAreas();
     int insert();
     List<Area> insertList();
-    int delete();
+    int delete(int id);
 }
