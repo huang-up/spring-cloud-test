@@ -1,18 +1,14 @@
 package com;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import tk.mybatis.mapper.autoconfigure.MapperAutoConfiguration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * Created by admin on 2017/10/12.
  */
-@EnableDiscoveryClient
+@EnableWebMvc // EnableWebMvc 使 Spring Boot 默认为我们提供了静态资源处理 WebMvcAutoConfiguration 失效
+//@EnableDiscoveryClient
 @SpringBootApplication
 //@MapperScan(basePackages = {"com.mapper.impl"})
 public class EurekaClientApplication {
