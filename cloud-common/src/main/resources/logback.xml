@@ -7,5 +7,11 @@
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <include resource="huang-up/logging/logback/base.xml"/>
 
+    <logger name = "org.apache.ibatis" level="debug"/>
+    <logger name = "org.mybatis" level="debug"/>
+    <!--<root level="debug">
+        &lt;!&ndash;<appender-ref ref="FILELOGGER" />&ndash;&gt;
+        <appender-ref ref="CONSOLE" />
+    </root>-->
     <jmxConfigurator />
 </configuration>

@@ -3,7 +3,6 @@ package com.domain;
 import com.mapper.annotation.Invisible;
 
 import javax.persistence.*;
-
 @Table(name = "area")
 public class Area {
     /**
@@ -17,6 +16,8 @@ public class Area {
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "Mysql")
 //    @GeneratedValue(generator = "UUID")
     private Integer id;
+
+    private Country country;
 
     /**
      *
@@ -117,5 +118,13 @@ public class Area {
 
     public void setInvisible(boolean invisible) {
         this.invisible = invisible;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 }

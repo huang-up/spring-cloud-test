@@ -1,6 +1,7 @@
 package com.mapper.impl;
 
 import com.domain.Area;
+import com.domain.Country;
 import com.github.pagehelper.Page;
 import com.mapper.GenericMapper;
 import com.mapper.driver.SimpleSelectInExtendedLanguageDriver;
@@ -30,4 +31,11 @@ public interface AreaMapper extends GenericMapper<Area> {
     @Lang(SimpleUpdateExtendedLanguageDriver.class)
     @Update("UPDATE area (#{area}) WHERE id = #{id} and name = #{name}")
     int updateArea(Area area);
+
+    @Select("select * from area where country_id=#{countryId}")
+    @Results({
+            @Result(id=true,property="id",column="id"),
+            @Result(property="name",column="name")
+    })
+    public List<Area> selectAreaByCountry(int countryId);
 }
