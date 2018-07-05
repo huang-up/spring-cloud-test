@@ -1,9 +1,8 @@
 package com.feign;
 
 import com.fallback.DcClientHystrix;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 // 使用@FeignClient注解来指定这个接口所要调用的服务名称
 // 关闭eureka-client服务，执行fallback表示熔断成功
 @FeignClient(name = "eureka-client", fallback = DcClientHystrix.class)
-@Qualifier(value = "dcClient")
+@Service(value = "dcClient")
 public interface DcClient {
     @GetMapping("/dc")
     String consumer();
